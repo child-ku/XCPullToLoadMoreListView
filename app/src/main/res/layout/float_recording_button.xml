@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/float_button_bg"
+    android:padding="16dp">
+
+    <!-- 录音状态显示 -->
+    <TextView
+        android:id="@+id/tv_recording_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击开始录音"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 录音时长显示 -->
+    <TextView
+        android:id="@+id/tv_recording_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 控制按钮 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <!-- 开始/暂停按钮 -->
+        <Button
+            android:id="@+id/btn_start_pause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/start_pause_button_bg"
+            android:text="开始"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginRight="16dp" />
+
+        <!-- 结束按钮 -->
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/stop_button_bg"
+            android:text="结束"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+</LinearLayout>
