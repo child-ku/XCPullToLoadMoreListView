@@ -70,45 +70,6 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new MyAdapter();
         mListView.setAdapter(mAdapter);
     }
-    private class MyAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return mList.size();
-        }
 
-        @Override
-        public Object getItem(int position) {
-            return mList.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder = null;
-            if (convertView == null) {
-                holder = new ViewHolder();
-                convertView = new TextView(getApplicationContext());
-                convertView.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
-                        , DensityUtil.dip2px(getApplicationContext(), 80)));
-                holder.text = (TextView) convertView;
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder) convertView.getTag();
-            }
-            holder.text.setText(mList.get(position));
-            holder.text.setTextColor(Color.BLACK);
-            holder.text.setGravity(Gravity.CENTER_VERTICAL);
-//            holder.text.setBackgroundColor(Color.WHITE);
-            return convertView;
-        }
-
-        class ViewHolder{
-            TextView text;
-        }
-    }
 
 }
